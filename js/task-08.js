@@ -12,23 +12,15 @@ function onForm(event) {
         mail,
         password,
     }
-       if (formData.mail === '') {
+    if (formData.mail===''||formData.password === '') {
         alert("Bсе поля должны быть заполнены.")
     }
-       if (formData.password === '') {
-        alert("Bсе поля должны быть заполнены.")
+    if (formData.mail && formData.password  !== '') {
+        console.log(formData)
     }
-    console.log(formData)
+  
     form.reset()
 }
 
   
 
-//    event.preventDefault()
-    
-//     const formData = new FormData(event.currentTarget)
-//     console.log(formData)
-//     formData.forEach((value, name) => {
-//         console.log(value)
-//         console.log(name)
-//     })
